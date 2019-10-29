@@ -31,7 +31,7 @@ def game_hash
       
       while j < 5
       hash[:home][:players][j] = {}
-      hash[:home][:players][j][:players_name] = home_team_arr[j*2] +" " + home_team_arr[j*2+1]
+      hash[:home][:players][j][:players_name] = home_team_arr[*2] +" " + home_team_arr[j*2+1]
       hash[:home][:players][j][:number] = home_team_arr[11+j].to_i
       hash[:home][:players][j][:shoe] = home_team_arr[17+j].to_i
       hash[:home][:players][j][:points] = home_team_arr[23+j].to_i
@@ -40,6 +40,16 @@ def game_hash
       hash[:home][:players][j][:steals] = home_team_arr[41 +j].to_i
       hash[:home][:players][j][:blocks] = home_team_arr[47 +j].to_i
       hash[:home][:players][j][:slam_dunks] = home_team_arr[54 +j].to_i
+=======
+      hash[:home][:players][j][:number] = home_team_arr[11+j]
+      hash[:home][:players][j][:shoe] = home_team_arr[17+j]
+      hash[:home][:players][j][:points] = home_team_arr[23+j]
+      hash[:home][:players][j][:rebounds] = home_team_arr[29 +j]
+      hash[:home][:players][j][:assists] = home_team_arr[35 +j]
+      hash[:home][:players][j][:steals] = home_team_arr[41 +j]
+      hash[:home][:players][j][:blocks] = home_team_arr[47 +j]
+      hash[:home][:players][j][:slam_dunks] = home_team_arr[54 +j]
+>>>>>>> 2316213746ea6fdb18883d53a6a6097fe71715e4
       j += 1
       end
     
@@ -47,6 +57,7 @@ def game_hash
       while j < 5
         hash[:away][:players][j] = {}
         hash[:away][:players][j][:players_name] = away_team_arr[j*2] +" " + away_team_arr[j*2+1]
+<<<<<<< HEAD
         hash[:away][:players][j][:number] = away_team_arr[11+j].to_i
         hash[:away][:players][j][:shoe] = away_team_arr[17+j].to_i
         hash[:away][:players][j][:points] = away_team_arr[23+j].to_i
@@ -58,6 +69,20 @@ def game_hash
         j += 1
         end
         return hash
+=======
+        hash[:away][:players][j][:number] = away_team_arr[11+j]
+        hash[:away][:players][j][:shoe] = away_team_arr[17+j]
+        hash[:away][:players][j][:points] = away_team_arr[23+j]
+        hash[:away][:players][j][:rebounds] = away_team_arr[29 +j]
+        hash[:away][:players][j][:assists] = away_team_arr[35 +j]
+        hash[:away][:players][j][:steals] = away_team_arr[41 +j]
+        hash[:away][:players][j][:blocks] = away_team_arr[47 +j]
+        hash[:away][:players][j][:slam_dunks] = away_team_arr[54 +j]
+        j += 1
+        end
+      
+    p hash
+>>>>>>> 2316213746ea6fdb18883d53a6a6097fe71715e4
     end
     
     def num_points_scored(name)
@@ -124,6 +149,7 @@ def game_hash
     end
       return arr
       end
+<<<<<<< HEAD
     def player_stats(name)
        j = 0
       while j < 5
@@ -255,3 +281,6 @@ end
       return false
   end
   end
+=======
+      
+>>>>>>> 2316213746ea6fdb18883d53a6a6097fe71715e4
